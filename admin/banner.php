@@ -70,10 +70,7 @@ if(mysqli_num_rows($result) > 0){
                                             Ações
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="edit_banner.php?post_id=<?php echo $banner['id']; ?>">
-                                                <i class="fas fa-edit"></i>
-                                                Editar
-                                            </a>
+                        
                                             <a class="dropdown-item text-danger" href="#"
                                             onclick="confirm('Você realmente deseja apagar essa publicação?') ? window.location.href='requests/request_delete_banner.php?banner_id=<?php echo $banner['id']; ?> ' : ''">
                                                 <i class="fas fa-trash"></i>

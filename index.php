@@ -20,16 +20,16 @@ $result = mysqli_query($connection, $query);
 $recipes = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 // Fecha a consulta
+
 mysqli_free_result($result);
+
 ?>
 <main class="">
   <section id="carrousel">
-  <?php if(count($recipes) > 0) { ?>
-        <?php foreach($recipes as $recipe) { ?>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-        <img src="<?php echo $recipe['image']; ?>" alt="Imagem da Receita" class="card-img-top">
+          <img src="src/img/10-min.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
           <img src="src/img/11-min.png" d-block w-100" alt="...">
@@ -37,10 +37,6 @@ mysqli_free_result($result);
         <div class="carousel-item">
           <img src="src/img/12-min.png" class="d-block w-100" alt="...">
         </div>
-        <?php } ?>
-        <?php } else { ?>
-          <p class="text-center">Nenhuma postagem encontrada.</p>
-        <?php } ?>
       </div>
     </div>
   </section>
@@ -54,7 +50,7 @@ mysqli_free_result($result);
           Chef Em Casa - Inspire-se na Culinária em Comunidade
         </h1>
         <p>
-          bemm-vindo ao Chef Em Casa, o seu destino online para explorar, criar e compartilhar experiências culinárias
+          Bem-vindo ao Chef Em Casa, o seu destino online para explorar, criar e compartilhar experiências culinárias
           únicas. Descubra receitas deliciosas, compartilhe suas próprias criações e conecte-se com uma comunidade
           apaixonada por culinária. Seja você um chef experiente ou alguém apenas começando sua jornada na cozinha, aqui
           você encontrará inspiração para cada paladar.
@@ -153,7 +149,7 @@ mysqli_free_result($result);
     <div class="container">
       <h2 class="mb-4">Faça parte da nossa comunidade!</h2>
       <p class="lead mb-4">Registre-se agora para ter acesso a receitas exclusivas, interagir com outros chefs e
-               compartilhar suas próprias criações.</p>
+        compartilhar suas próprias criações.</p>
       <div class="row justify-content-center">
         <div class="col-md-6">
           <a href="cadastro.php" class="btn btn-light btn-lg btn-block">Cadastre-se</a>
