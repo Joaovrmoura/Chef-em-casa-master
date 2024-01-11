@@ -20,9 +20,7 @@ $result = mysqli_query($connection, $query);
 $recipes = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 // Fecha a consulta
-
 mysqli_free_result($result);
-
 ?>
 <main class="">
   <section id="carrousel">
@@ -32,7 +30,7 @@ mysqli_free_result($result);
           <img src="src/img/10-min.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="src/img/11-min.png" d-block w-100" alt="...">
+          <img src="src/img/11-min.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
           <img src="src/img/12-min.png" class="d-block w-100" alt="...">

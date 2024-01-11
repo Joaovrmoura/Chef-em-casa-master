@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
 
     //  Configuração para o upload da imagem
-    $targetDir = "../../src/img/banner/";
+    $targetDir = "../../src/img/banner";
     $randomName = uniqid() . "_" . basename($_FILES['image']['name']);
     $targetFile = $targetDir . $randomName;
     $uploadOk = 1;
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['message'] = "Desculpe, a sua imagem deve ter no máximo 5MB.";
         $_SESSION['message_type'] = "danger";
         $uploadOk = 0;
-        header("Location: ../create_banner.php");
+        header("Location: ../creat_banner.php");
     }
 
     if($uploadOk == 1 && move_uploaded_file($_FILES['image']['tmp_name'], $targetFile)){
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtém o id usuário logado
         $user_id = $_SESSION['user_id'];
 
-        $image = "src/img/banner/" . $randomName;
+        $image = "src/img/banner" . $randomName;
 
         $query = "INSERT INTO banner (user_id, title, image_banner) VALUES ('$user_id', '$title', '$image')";
 
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }else{
             $_SESSION['message'] = "Ocorreu um erro ao cadastrar sua postagem";
             $_SESSION['message_type'] = "danger";
-            header("Location: ../create_banner.php");
+            header("Location: ../creat_banner.php");
         }
     }
 

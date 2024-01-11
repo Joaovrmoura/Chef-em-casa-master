@@ -25,5 +25,5 @@ include_once('../helpers/isActivePage.php');
     ?>
     <a href="chef-ia.php" class="list-group-item list-group-item-action <?= isActivePage($currentPage, 'chef-ia') ?>"><i class="fa fa-robot"></i> Chef IA</a>
 
-    <a href="banner.php" class="list-group-item list-group-item-action <?= isActivePage($currentPage, 'banner') ?>"><i class="fa fa-utensils"></i>banners</a>
+    <a href="banner.php" class="list-group-item list-group-item-action <?= isActivePage($currentPage, 'banner') ?>"><i class="fa fa fa-solid fa-image"></i> banners</a>
 </div>

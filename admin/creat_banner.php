@@ -53,6 +53,6 @@ include_once('../components/admin/header.php');
 </main>
 
 <?php
-$currentPage = 'new_post';
+$currentPage = 'banner';
 include_once('../components/admin/footer.php');
 ?>

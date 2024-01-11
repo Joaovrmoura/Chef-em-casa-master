@@ -32,7 +32,7 @@ if(mysqli_num_rows($result) > 0){
         <section class="col-md-9">
             <h2><?= $pageInfo['title'] ?></h2>
             <p><?= $pageInfo['description'] ?></p>
-            <a href="create_banner.php" class="btn btn-success my-2 my-sm-0 text-light">
+            <a href="creat_banner.php" class="btn btn-success my-2 my-sm-0 text-light">
                 Adicionar banner
             </a>
             <hr>
@@ -76,7 +76,7 @@ if(mysqli_num_rows($result) > 0){
                                                 <i class="fas fa-trash"></i>
                                                 Excluir
                                             </a>
-                                            <a class="dropdown-item" href="../banner.php?banner_id=<?php echo $banner['id']; ?>" target="_blank">
+                                            <a class="dropdown-item" href="../index.php?banner_id=<?php echo $banner['id']; ?>" target="_blank">
                                                 <i class="fas fa-eye"></i>
                                                 Ver na página
                                             </a>
